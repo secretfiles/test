@@ -13,9 +13,9 @@ window.onload=function() {
       if (MD5(answer.value+textbox.value) != hash){
         alert("Wrong password!");
         entryCount++;
-        textbox.value = "";
         console.log(answer.value+textbox.value);
         console.log(MD5(answer.value+textbox.value));
+        textbox.value = "";
       } else {
         // success!
         entryCount = 0;
