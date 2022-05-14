@@ -19,7 +19,7 @@ window.onload=function() {
       } else {
         // success!
         entryCount = 0;
-        window.location.href = 'https://docs.google.com/document/d/1ve8e09TETaNEE94cZEjRTfYYoX-XkwQHLlYmubJzsK4/edit';
+        window.location.href = 'frame.html';
       }
     } else {
         alert("Out of entries");
