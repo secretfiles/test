@@ -4,24 +4,25 @@ let hash = "123";
 let entryCount = 0;
 let entryLimit = 3;
 let button = document.getElementById("button");
+window.onload=function() {
+  button.addEventListener("click", function(){
+    let answer = document.getElementById("u");  
+    let textbox = document.getElementById("p");
 
-button.addEventListener("click", function(){
-  let answer = document.getElementById("u");  
-  let textbox = document.getElementById("p");
-
-  if (entryCount < entryLimit) {
-    if (textbox.value != password && answer.value != login){
-      alert("Wrong password!");
-      entryCount++;
-      textbox.value = "";
-      console.log(answer+textbox);
-      console.log(MD5(answer+textbox));
+    if (entryCount < entryLimit) {
+      if (textbox.value != password && answer.value != login){
+        alert("Wrong password!");
+        entryCount++;
+        textbox.value = "";
+        console.log(answer+textbox);
+        console.log(MD5(answer+textbox));
+      } else {
+        // success!
+        entryCount = 0;
+        window.location.href = 'https://docs.google.com/document/d/1ve8e09TETaNEE94cZEjRTfYYoX-XkwQHLlYmubJzsK4/edit';
+      }
     } else {
-      // success!
-      entryCount = 0;
-      window.location.href = 'https://docs.google.com/document/d/1ve8e09TETaNEE94cZEjRTfYYoX-XkwQHLlYmubJzsK4/edit';
+        alert("Out of entries");
     }
-  } else {
-      alert("Out of entries");
-  }
-})
+  })
+}
