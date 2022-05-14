@@ -10,12 +10,12 @@ window.onload=function() {
     let textbox = document.getElementById("p");
 
     if (entryCount < entryLimit) {
-      if (textbox.value != password && answer.value != login){
+      if (MD5(answer.value+textbox.value) != hash){
         alert("Wrong password!");
         entryCount++;
         textbox.value = "";
-        console.log(answer+textbox);
-        console.log(MD5(answer+textbox));
+        console.log(answer.value+textbox.value);
+        console.log(MD5(answer.value+textbox.value));
       } else {
         // success!
         entryCount = 0;
