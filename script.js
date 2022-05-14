@@ -3,11 +3,11 @@ var MD5=function(d){d=unescape(encodeURIComponent(d));result=M(V(Y(X(d),8*d.leng
 let hash = "123";
 let entryCount = 0;
 let entryLimit = 3;
+let button = document.getElementById("button");
 
 button.addEventListener("click", function(){
   let answer = document.getElementById("u");  
   let textbox = document.getElementById("p");
-  let button = document.getElementById("button");
 
   if (entryCount < entryLimit) {
     if (textbox.value != password && answer.value != login){
